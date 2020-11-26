@@ -1,5 +1,5 @@
 ﻿namespace WindowsFormsApp1 {
-    partial class login {
+    partial class Login {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,17 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.user = new System.Windows.Forms.TextBox();
             this.pwd = new System.Windows.Forms.TextBox();
             this.bt_log = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bt_cancel = new System.Windows.Forms.Button();
             this.bt_exit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +41,7 @@
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(112, 20);
             this.user.TabIndex = 0;
+            this.user.TextChanged += new System.EventHandler(this.user_TextChanged);
             // 
             // pwd
             // 
@@ -61,36 +60,6 @@
             this.bt_log.Text = "logar";
             this.bt_log.UseVisualStyleBackColor = true;
             this.bt_log.Click += new System.EventHandler(this.bt_log_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(308, 224);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(338, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = " Slytherin";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Minion Pro", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(338, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 26);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Segurança da Informação";
             // 
             // label3
             // 
@@ -132,23 +101,31 @@
             this.bt_exit.UseVisualStyleBackColor = true;
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
-            // login
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(153, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(301, 227);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 437);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.bt_cancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_log);
             this.Controls.Add(this.pwd);
             this.Controls.Add(this.user);
-            this.Name = "login";
-            this.Text = "login";
+            this.Name = "Login";
+            this.Text = "VixSoftware";
+            this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,12 +137,10 @@
         private System.Windows.Forms.TextBox user;
         private System.Windows.Forms.TextBox pwd;
         private System.Windows.Forms.Button bt_log;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bt_cancel;
         private System.Windows.Forms.Button bt_exit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

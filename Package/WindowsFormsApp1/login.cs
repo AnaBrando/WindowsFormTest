@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 
 namespace WindowsFormsApp1 {
-    public partial class login : Form {
-        string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Aluno\Desktop\Anaex\WindowsFormsApp1\WindowsFormsApp1\cadastro.mdf;Integrated Security=True;Connect Timeout=30";
+    public partial class Login : Form {
+        string connection = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Vix;Integrated Security=True";
         bool novo;
-        public login() {
+        public Login() {
             InitializeComponent();
         }
 
@@ -22,8 +22,7 @@ namespace WindowsFormsApp1 {
             novo = true;
             //conexão
             if(novo) {
-                string sql = "SELECT * FROM users WHERE nome='" + user.Text + "'AND pwd='" + pwd.Text + "'";
-
+                string sql = "SELECT * FROM Usuario WHERE Descricao='" + user.Text + "'AND Senha='" + pwd.Text + "'";
                 SqlConnection con = new SqlConnection(connection);
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
@@ -61,6 +60,16 @@ namespace WindowsFormsApp1 {
 
         private void bt_exit_Click(object sender, EventArgs e) {
             Application.Exit();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void user_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

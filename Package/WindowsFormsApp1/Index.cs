@@ -24,19 +24,11 @@ namespace WindowsFormsApp1 {
 
         }
 
-        private void clienteToolStripMenuItem_Click(object sender, EventArgs e) {
-            cadastro cadastro = new cadastro();
-            cadastro.Show();
-        }
-
+    
         private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
             Application.Exit();
         }
 
-        private void usersToolStripMenuItem_Click(object sender, EventArgs e) {
-            cadastroUser cadastro = new cadastroUser();
-            cadastro.Show();
-
-        }
+      
     }
 }

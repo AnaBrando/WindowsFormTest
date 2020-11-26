@@ -61,12 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cadastro.Designer.cs">
-      <DependentUpon>cadastro.cs</DependentUpon>
-    </Compile>
     <Compile Include="cadastroDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,37 +76,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cadastroDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="cadastroUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cadastroUser.Designer.cs">
-      <DependentUpon>cadastroUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="cadastro.resx">
-      <DependentUpon>cadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="cadastroUser.resx">
-      <DependentUpon>cadastroUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -122,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="cadastroDataSet.xsc">
       <DependentUpon>cadastroDataSet.xsd</DependentUpon>
@@ -189,6 +172,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>cadastro.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\rocklee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
